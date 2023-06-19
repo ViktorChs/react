@@ -1,10 +1,14 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .tm-followCard{
     display: flex;
     align-items: center;
     color: #fff;
     font-size: .8rem;
     justify-content: space-between;
-    margin: 5px 0;
 }
 .tm-followCard-header{
     display: flex;
@@ -30,4 +34,39 @@
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
+    cursor: pointer;
+    transition:  .3s ease background-color;
+    width: 135px;
+}
+.tm-followCard-button:hover{
+    opacity: .8;
+}
+.tm-followCard-text{
+    display: block;
+}
+.tm-followCard-button.isfollowing{
+    border: 1px solid #bbb;
+    background: transparent;
+    color: #fff;
+
+}
+.tm-followCard-button.isfollowing:hover{
+    border: 1px solid red;
+    background: rgba(255, 0, 0, 0.178);
+    color: red;
+    transition:  .3s ease all;
+}
+
+.tm-followCard-stopFollow:hover{
+
+}
+.tm-followCard-button.isfollowing:hover .tm-followCard-text{
+    display: none;
+}
+
+.tm-followCard-button.isfollowing:hover .tm-followCard-stopFollow{
+    display: block;
+}
+.tm-followCard-stopFollow{
+    display: none;
 }
